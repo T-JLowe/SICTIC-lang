@@ -1,0 +1,16 @@
+program: Sample;
+
+var: a, x, s, t;
+
+begin:
+    a := 100;
+    #if: (a>10), then:
+        x := 1; s := 0;
+        while: (x <= a), do:
+            s := (s+x); x := (x+1);
+        end.
+    end.#
+    t := ((a*(a+1))/2);
+    print: s;
+    print: t;
+halt.
